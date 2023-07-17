@@ -12,7 +12,7 @@ clean:
 	rm -rf fib_1_v fib_2_v fib_1_nim fib_2_nim fib_1_go fib_2_go
 
 measure: all
-	hyperfine './fib_1_v 42' './fib_2_v 42' './fib_1_nim 42' './fib_2_nim 42' './fib_1_go 42' './fib_2_go 42'
+	hyperfine --warmup=2 './fib_1_v 42' './fib_1_nim 42' './fib_1_go 42' './fib_2_v 42' './fib_2_nim 42' './fib_2_go 42'
 
 ###############################
 
